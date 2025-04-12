@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"/>
     <title>Good Tip Calculator</title>
 </head>
 
@@ -11,20 +12,23 @@
     <form id="tipForm">
         <label for="billTotal">Bill Total $:</label>
         <input type="text" id="billTotal" />
+        <p id="errorMessage" style="color: red; display: none;">Please enter a positive number.</p>
 
         <label>Total Bill with Tax (11%):</label>
-        <input type="text" id="totalWithTax" disabled />
+        <input type="text" id="totalWithTax" placeholder="0.00" disabled />
 
         <label for="tipSlider">Tip:</label>
-        <input type="range" id="tipSlider" min="0" max="100" />
+        <input type="range" id="tipSlider" min="0" max="100" value="0" />
+        <span id="sliderValue">0%</span>
         <input type="text" id="tipPercentage" disabled />
 
         <label>Tip Amount $:</label>
-        <input type="text" id="tipAmount" disabled />
+        <input type="text" id="tipAmount" placeholder="0.00" disabled />
 
         <label>Total Bill with Tip and Tax $:</label>
-        <input type="text" id="totalWithTip" disabled />
+        <input type="text" id="totalWithTip" placeholder="0.00" disabled />
     </form>
+<script src="js/script.js"></script>
 </body>
 
 </html>
