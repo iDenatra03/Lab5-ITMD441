@@ -9,21 +9,21 @@
 
 <body>
     <form id="tipForm">
-        <label for="billTotal">Bill Total:</label>
+        <label for="billTotal">Bill Total $:</label>
         <input type="text" id="billTotal" />
 
-        <label for="tipSlider">Tip Percentage:</label>
+        <label>Total Bill with Tax (11%):</label>
+        <input type="text" id="totalWithTax" disabled />
+
+        <label for="tipSlider">Tip:</label>
         <input type="range" id="tipSlider" min="0" max="100" />
         <input type="text" id="tipPercentage" disabled />
 
-        <label>Tip Amount:</label>
+        <label>Tip Amount $:</label>
         <input type="text" id="tipAmount" disabled />
 
-        <label>Total Bill with Tip:</label>
+        <label>Total Bill with Tip and Tax $:</label>
         <input type="text" id="totalWithTip" disabled />
-
-        <label>Total Bill with Tip and Tax:</label>
-        <input type="text" id="totalWithTax" disabled />
     </form>
 </body>
 
