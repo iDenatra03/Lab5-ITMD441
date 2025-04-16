@@ -30,7 +30,7 @@ function calculate() {
     return;
   }
 
-  error.style.display = "none"; // Hide error if valid
+  error.style.display = "none"; 
 
   const tipValue = bill * (tipPercent / 100);
   const taxValue = bill * 0.11;
@@ -44,13 +44,11 @@ function calculate() {
   totalWithTip.value = format(totalWithTipAndTax);
 }
 
-// Run validation every time user types
 billInput.addEventListener("input", () => {
     const billValue = billInput.value.trim();
     const bill = parseFloat(billValue);
     const error = document.getElementById("errorMessage");
   
-    // Case 1: Empty input
     if (billValue === "") {
       error.style.display = "none";
       tipSlider.value = 0;
@@ -62,7 +60,6 @@ billInput.addEventListener("input", () => {
       return;
     }
   
-    // Case 2: Invalid or non-positive number
     if (isNaN(bill) || bill <= 0) {
       error.style.display = "block";
       tipPercentage.value = "";
@@ -72,7 +69,6 @@ billInput.addEventListener("input", () => {
       return;
     }
   
-    // Case 3: Valid positive number
     error.style.display = "none";
     calculate();
   });
